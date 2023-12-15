@@ -1,0 +1,97 @@
+:root {
+    --main-bg-color: #DADFF7;
+    --calculator-bg-clo: #071013;
+    --operation-bg-clo: #f69906;
+    --num-bg-clo: #313131;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body,
+html {
+    width: 100%;
+    max-height: 100vh;
+    background-color: var(--main-bg-color);
+}
+
+.container {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 600ms;
+}
+
+.calculator,
+.container .display input {
+    background-color: var(--calculator-bg-clo);
+}
+
+.calculator {
+    width: 25rem;
+    height: 38.56rem;
+    margin: 5px;
+    border-radius: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 900;
+    box-shadow: 12px 12px 24px #7c8188,
+        -12px -12px 24px #858f97;
+}
+
+.container input,
+.numbers input,
+.numbers .first-row input {
+    border: 0;
+    border-radius: 10px;
+}
+
+.container .display input {
+    width: 20.5rem;
+    height: 3.75rem;
+    display: flex;
+    justify-content: flex-end;
+    text-align: right;
+    margin: 1rem 0;
+    color: #9490AC;
+    font-size: 2rem;
+}
+
+.numbers {
+    padding: 20px;
+}
+
+@media (max-width: 600px) {
+    .numbers {
+        padding: 5px;
+    }
+}
+
+.numbers input {
+    width: 4.5rem;
+    height: 3.75rem;
+    margin: 0 5px 1rem;
+    padding: 10px;
+    color: #fff;
+    background-color: var(--num-bg-clo);
+    font-size: 1.4rem;
+}
+
+.numbers .first-row input,
+.calculator .bg-yellow,
+.numbers .bg-yellow:hover {
+    background-color: var(--operation-bg-clo);
+}
+
+.numbers .first-row input:hover,
+.calculator .bg-yellow:hover {
+    background-color: #eef606db;
+}
+
+.numbers input:hover {
+    background-color: #313131a8;
+}
